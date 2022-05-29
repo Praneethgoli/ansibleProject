@@ -15,4 +15,11 @@
       copy:
         src: index.html
         dest: /var/www/html/
+
+    - name: debuging module
+      shell: ps aux
+      register: output
+
+    - name: show the value of output
+      debug: var=output
 ...
